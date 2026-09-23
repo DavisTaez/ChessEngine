@@ -1,4 +1,4 @@
-# ♟️ RagnusEngine - Motor de Ajedrez Personalizado
+HEAD# ♟️ RagnusEngine - Motor de Ajedrez Personalizado
 
 Un motor de ajedrez interactivo en JavaScript diseñado para modelar y replicar el estilo de juego del usuario (**Mongo12345** / **Davis_Taez**). El proyecto utiliza un algoritmo de búsqueda Minimax con poda Alfa-Beta combinado con un libro de aperturas flexible y tablas de evaluación posicional adaptadas a patrones reales de partidas en Lichess.
 
@@ -34,3 +34,7 @@ Un motor de ajedrez interactivo en JavaScript diseñado para modelar y replicar 
     └── engine.js     # Cerebro del motor (RagnusEngine)
 
 📜 Historial de Versiones y Changelogv1.2.0 - Ajuste Táctico y Patrones RealesAperturas Integradas:Blancas: Añadida la línea agresiva de la Italiana con sacrificio en $f7$ (5.Bxf7+!, 6.Ng5+, 7.Qf3).Negras: Añadida la variante de avance de la Defensa Francesa (1...e6, c5, d5) y la respuesta táctica del tenedor central (5...d4!).Negras: Registrada la jugada característica del tenedor en $e4$ contra la Italiana/4 Caballos (4...Nxe4! 5.Nxe4 d5).Ajuste de Evaluaciones:Reprogramadas las tablas PAWN_TABLE, KNIGHT_TABLE y ROOK_TABLE con pesos tácticos basados en partidas de Lichess.v1.1.0 - Normalización del Libro de AperturasCorrección de la consulta del libro de aperturas a notación SAN para evitar desconexiones tempranas.Incorporación de evaluaciones posicionales iniciales para el avance del flanco de dama.v1.0.0 - Versión InicialImplementación base de Minimax con Poda Alfa-Beta.Interfaz gráfica básica con chessboard.js y chess.js.🧪 Cómo Continuar el EntrenamientoPara seguir refinando el motor con más partidas:Exporta tus archivos PGN desde Lichess.Analiza o comparte las partidas para extraer nuevas secuencias de apertura o finales recurrentes.Actualiza el objeto OPENING_BOOK o las bonificaciones dentro de evaluateBoard() en js/engine.js.
+=======
+# ChessEngine
+Motor con jugadas humanizadas
+>>>>>>> 7c1fd831cacc738e5915535674666b49699e1e3c
