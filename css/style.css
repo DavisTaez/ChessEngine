@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e24;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper {
+  max-width: 850px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Contenedor Flexbox Principal */
+.game-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* COLUMNA DEL TABLERO: Ancho fijo para evitar superzoom */
+.board-column {
+  width: 400px !important;
+  max-width: 400px !important;
+  flex: 0 0 400px !important;
+}
+
+#board {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+/* PARCHE OBLIGATORIO PARA PIEZAS GIGANTES */
+#board .square-55d63 img,
+#board img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  height: auto !important;
+}
+
+/* COLUMNA DEL MENÚ LATERAL */
+.panel-column {
+  flex: 1;
+  min-width: 260px;
+  background-color: #2b2b36;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.status-card {
+  background-color: #383846;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.eval-box {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4da6ff;
+}
+
+.control-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4a4a5a;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.button-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn-icon {
+  flex: 1;
+  padding: 8px;
+  font-size: 1.1rem;
+  background-color: #383846;
+  border: 1px solid #4a4a5a;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-icon:hover {
+  background-color: #4a4a5a;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4a4a5a;
+  color: white;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+.btn-warning {
+  background-color: #e07a5f;
+}
+
+.btn-danger {
+  background-color: #e63946;
+}
+
+@media (max-width: 750px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Resaltado con transparencia para la pieza a mover (Origen - Rojo) */
+div[data-square].highlight-red {
+  background-color: rgba(106, 214, 44, 0.185) !important;
+  box-shadow: inset 0 0 10px rgba(28, 185, 80, 0.185) !important;
+  outline: 2px dashed rgba(68, 239, 182, 0.11) !important;
+}
+
+/* Resaltado con transparencia para la casilla destino (Llegada - Azul) */
+div[data-square].highlight-blue {
+  background-color: rgba(59, 131, 246, 0.137) !important;
+  box-shadow: inset 0 0 10px rgba(29, 79, 216, 0.082) !important;
+  outline: 2px dashed rgba(59, 130, 246, 0.08) !important;
+}

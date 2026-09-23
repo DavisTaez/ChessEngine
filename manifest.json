@@ -1,0 +1,16 @@
+{
+  "short_name": "RagnusEngine",
+  "name": "RagnusEngine - Chess Trainer",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2093/2093822.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#1e1e24",
+  "theme_color": "#1e1e24",
+  "display": "standalone",
+  "orientation": "portrait"
+}
